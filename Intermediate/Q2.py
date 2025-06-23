@@ -1,10 +1,8 @@
 def read_lines(filename):
     """
     Reads and returns lines from the specified file.
-    
     Args:
         filename (str): The name of the file to read.
-
     Returns:
         list[str]: A list of lines from the file, or None if file not found.
     """
@@ -13,7 +11,7 @@ def read_lines(filename):
             lines = f.readlines()
             return lines
     except FileNotFoundError:
-        print(f"❌ File '{filename}' not found. Please check the file name and try again.")
+        print(f" File '{filename}' not found. Please check the file name and try again.")
         return None
 
 
@@ -22,8 +20,8 @@ def main():
     lines = read_lines(filename)
     
     if lines is not None:
-        print(f"✅ File '{filename}' loaded successfully.")
-        print(f"📄 Line count: {len(lines)}")
+        print(f"File '{filename}' loaded successfully.")
+        print(f"Line count: {len(lines)}")
 
 
 if __name__ == "__main__":
